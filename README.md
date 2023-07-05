@@ -1,4 +1,4 @@
-# lesson_7
+# VueJS Composition API | Blogging App
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -26,6 +26,12 @@ npm run dev
 
 ```sh
 npm run build
+```
+
+### Run Your Local DB
+
+```sh
+npx json-server --w data/db.json
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
