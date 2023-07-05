@@ -33,6 +33,7 @@ const { post, error } = getPostItem(props.id);
     margin-bottom: 2rem;
     line-height: 1.2em;
     opacity: 0.9;
+    font-weight: 500;
 }
 
 .blog-body p {
