@@ -25,7 +25,12 @@ main {
 
 .h1-welcome {
   text-transform: capitalize;
-  font-size: 3rem;
+  font-size: 56px;
   margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 500;
 }
 </style>
