@@ -15,12 +15,15 @@
                         </svg>
                     </div>
                 </router-link>
-                <span v-for="tag in post.tags" :key="tag.id">#{{ tag }}</span>
             </div>
             <div class="blog-heading-title">
                 <h1>{{ post.title }}</h1>
             </div>
             <div class="blog-body" v-html="post.body"></div>
+
+            <div class="tags-wrapper d-flex m-auto-top gap-1">
+                <span v-for="tag in post.tags" :key="tag.id">#{{ tag }}</span>
+            </div>
         </article>
     </div>
 </template>
@@ -48,7 +51,7 @@ const { post, error } = getPostItem(props.id);
 }
 
 .blog-body p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-size: 1.25rem;
     line-height: 1.5em;
     font-family: var(--ff-primary);
@@ -65,5 +68,9 @@ const { post, error } = getPostItem(props.id);
 .blogpost-item-wrapper .tags-wrapper {
     gap: 1.25rem;
     margin-bottom: 1.25rem;
+}
+
+.svg-back-arrow-wrapper:hover svg path {
+    fill: var(--color-600-dark);
 }
 </style>

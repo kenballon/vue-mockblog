@@ -8,7 +8,8 @@ const { posts, error } = getAllPosts()
 
 <template>
   <main>
-    <h1 class="h1-welcome">Welcome to this mockup blog</h1>
+    <h1 class="h1-welcome">VueJS 3 | Mockup Blog App</h1>
+    <h2 class="h2-short-desc">This is made VueJS 3 with Router functionality as a Single Page Application or (SPA)</h2>
     <div class="error-msg-wrapper" v-if="error">
       {{ error }}
     </div>
@@ -27,6 +28,12 @@ main {
   text-transform: capitalize;
   font-size: 56px;
   margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.h2-short-desc {
+  font-family: var(--ff-secondary);
+  margin-bottom: 3rem;
   font-weight: 500;
 }
 
