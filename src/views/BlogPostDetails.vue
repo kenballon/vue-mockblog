@@ -23,23 +23,26 @@ const { post, error } = getPostItem(props.id);
 </script>
 <style>
 .blogpost-item-wrapper article {
-    max-width: 600px;
+    max-width: 45ch;
     margin-inline: auto;
     margin-block: 4rem;
 }
 
 .blog-heading-title h1 {
-    font-size: 48px;
+    font-size: 40px;
     margin-bottom: 2rem;
     line-height: 1.2em;
     opacity: 0.9;
-    font-weight: 500;
+    font-family: var(--ff-secondary);
+    /* text-wrap: balance; */
 }
 
 .blog-body p {
     margin-bottom: 1rem;
     font-size: 1.25rem;
     line-height: 1.5em;
+    font-family: var(--ff-primary);
+    opacity: 0.9;
 }
 
 .blogpost-item-wrapper .tags-wrapper {
