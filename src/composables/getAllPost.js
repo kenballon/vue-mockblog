@@ -11,15 +11,15 @@ const getAllPost = () => {
         throw new Error("Unable to fetch data from the database...");
       }
       posts.value = await response.json();
-
-      console.log(posts);
     } catch (err) {
       error.value = err.message;
       console.log(error.value);
     }
   };
 
-  return { posts, error, getData };
+  getData();
+
+  return { posts, error };
 };
 
 export default getAllPost;
