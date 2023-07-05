@@ -1,1 +1,82 @@
-@import './base.css';
+@import './base.css' layer(reset);
+
+@layer reset,
+theme;
+
+@layer theme {
+    body {
+        background-color: #fffcf7;
+        opacity: 0.8;
+        background-image: radial-gradient(#444df75b 0.5px, #fffcf7 0.5px);
+        background-size: 16px 16px;
+    }
+
+    .d-grid {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .grid-col-1 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-col-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .d-flex {
+        display: flex;
+    }
+
+    .flex-dir-col {
+        flex-direction: column;
+    }
+
+    .m-auto-left {
+        margin-left: auto;
+    }
+
+    .m-auto-right {
+        margin-right: auto;
+    }
+
+    .align-items-center {
+        align-items: center;
+    }
+
+    .justify-content-center {
+        justify-content: center;
+    }
+
+    .gap-1 {
+        gap: 1.5rem;
+    }
+
+    .gap-2 {
+        gap: 2rem;
+    }
+
+    .m-auto-top {
+        margin-top: auto;
+    }
+
+    .m-auto-bottom {
+        margin-bottom: auto;
+    }
+
+    .m-auto-left {
+        margin-left: auto;
+    }
+
+    .m-auto-right {
+        margin-right: auto;
+    }
+
+    a:hover {
+        color: var(--color-900-dark);
+    }
+
+    #app {
+        height: 100vh;
+    }
+}

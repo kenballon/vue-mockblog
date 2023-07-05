@@ -1,6 +1,14 @@
 :root {
   --ff-primary: 'DM Serif Display', serif;
   --ff-secondary: 'Plus Jakarta Sans', sans-serif;
+
+  /* color palette */
+  --color-900: #FF9B9B;
+  --color-800: #FFD6A5;
+  --color-700: #FFFEC4;
+  --color-600: #CBFFA9;
+
+  --color-900-dark: #971111;
 }
 
 
@@ -104,7 +112,7 @@ a {
 }
 
 .container {
-  width: min(83.5rem, calc(100vw - 1.5rem));
+  width: min(80rem, calc(100vw - 1.5rem));
   margin-inline: auto;
   padding: 1.5rem;
 }
