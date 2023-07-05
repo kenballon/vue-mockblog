@@ -1,0 +1,37 @@
+{
+    "blogPosts": [
+        {
+            "title": "Building My First App with Vue.js and Firebase: Top Mistakes and Key Learnings",
+            "body": "<p>Over the past month, I worked on a not-so-serious side project called focusstopwatch.com (It’s open source. you can access the code here). The site’s purpose? To keep track of your focus time, enabling you to specify tasks and later evaluate your performance.</p><p> The concept came to me after feeling unsatisfied with existing focus/study systems. The traditional Pomodoro method, for example, didn’t quite suit me. I needed a tool to accurately measure my productivity. Hence, FocusStopwatch concept became my go-to.</p>",
+            "tags": [
+                "vuejs",
+                "js",
+                "javascript",
+                "frontend"
+            ],
+            "id": 1
+        },
+        {
+            "title": "Must-Know Reusable Module Vs Component In Vue 3 Composition API",
+            "body": "<p>As a Vue.js developer, we want to keep our code clean and tidy by creating the optimal amount of reusable code. </p><p>With Composition API, we can absolutely do that by creating reusable JS modules aka hook functions and child components.</p>",
+            "tags": [
+                "vuejs",
+                "js",
+                "javascript",
+                "frontend"
+            ],
+            "id": 2
+        },
+        {
+            "title": "Lets Create: A Data Visualization using Svelte",
+            "body": "<p>If you haven't heard of Svelte, it is a relatively new JavaScript framework that challenges the norm by shifting the bulk of the work from the browser to the compile/build step.</p><p>In doing that, it brings many benefits, most notably, the ability to ship less code to the browser (as you don't need the entire library like with frameworks such as React or Vue) as well as a bunch more stuff that I won't be talking about in this article as, in my opinion, the main benefit of Svelte is how easy it is to get started and how nice it is to use from a development perspective.</p>",
+            "tags": [
+                "vuejs",
+                "js",
+                "javascript",
+                "frontend"
+            ],
+            "id": 3
+        }
+    ]
+}
