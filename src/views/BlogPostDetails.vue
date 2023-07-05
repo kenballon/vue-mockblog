@@ -30,7 +30,7 @@ const { post, error } = getPostItem(props.id);
 
 .blog-heading-title h1 {
     font-size: 40px;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     line-height: 1.2em;
     opacity: 0.9;
     font-family: var(--ff-secondary);
@@ -43,6 +43,13 @@ const { post, error } = getPostItem(props.id);
     line-height: 1.5em;
     font-family: var(--ff-primary);
     opacity: 0.9;
+    font-weight: 300;
+}
+
+.blog-body p:first-child {
+    &::first-letter {
+        font-size: 3em;
+    }
 }
 
 .blogpost-item-wrapper .tags-wrapper {
