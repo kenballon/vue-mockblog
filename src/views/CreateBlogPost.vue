@@ -1,3 +1,33 @@
+<script setup>
+import { ref } from 'vue';
+import createPostItem from '../composables/createPostItem.js'
+import { useRouter } from 'vue-router';
+
+const router = useRouter(); // for routing after creation of a blog post
+
+const title = ref('')
+const body = ref('')
+const tag = ref('')
+const tags = ref([])
+
+const handleKeydown = () => {
+    console.log('adde');
+    if (!tags.value.includes(tag.value)) {
+        tag.value = tag.value.replace(/\s/, "")//removes all whitespaces
+        tags.value.push(tag.value)
+    }
+    tag.value = ''
+}
+
+const handleCreate = async () => {
+    await createPostItem(title.value, body.value, tags.value).then(
+        //route to home
+        router.push('/')
+    )
+}
+
+</script>
+
 <template>
     <div>
         <div class="form-wrapper">
@@ -26,32 +56,16 @@
         </div>
     </div>
 </template>
-<script setup>
-import { ref } from 'vue';
-import createPostItem from '../composables/createPostItem.js'
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
-
-const title = ref('')
-const body = ref('')
-const tag = ref('')
-const tags = ref([])
-
-const handleKeydown = () => {
-    console.log('adde');
-    if (!tags.value.includes(tag.value)) {
-        tag.value = tag.value.replace(/\s/, "")//removes all whitespaces
-        tags.value.push(tag.value)
-    }
-    tag.value = ''
+<style>
+.pill-tag {
+    padding: 4px 10px;
+    background-color: #FFD6A5;
+    border: 1px solid #b46300;
+    border-radius: 40px;
+    font-size: 12px;
+    opacity: 0.8;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-
-const handleCreate = async () => {
-    await createPostItem(title.value, body.value, tags.value).then(
-        //route to home
-        router.push('/')
-    )
-}
-
-</script>
+</style>
