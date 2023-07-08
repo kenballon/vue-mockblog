@@ -2,6 +2,7 @@
 import getAllPosts from '../composables/getAllPost.js'
 import BlogPostsList from '../components/BlogPostsList.vue'
 
+
 const { posts, error } = getAllPosts()
 
 </script>
@@ -26,7 +27,7 @@ main {
 
 .h1-welcome {
   text-transform: capitalize;
-  font-size: 56px;
+  font-size: 64px;
   margin-bottom: 2rem;
   font-weight: 500;
 }
@@ -34,7 +35,10 @@ main {
 .h2-short-desc {
   font-family: var(--ff-secondary);
   margin-bottom: 3rem;
-  font-weight: 500;
+  font-weight: 300;
+  font-size: 1.25rem;
+  width: 45ch;
+  letter-spacing: .5px;
 }
 
 h2 {

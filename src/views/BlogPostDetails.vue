@@ -45,9 +45,6 @@ const { post, error } = getPostItem(props.id);
     font-size: 40px;
     margin-bottom: 2.5rem;
     line-height: 1.2em;
-    opacity: 0.9;
-    font-family: var(--ff-secondary);
-    /* text-wrap: balance; */
 }
 
 .blog-body p {
@@ -59,11 +56,19 @@ const { post, error } = getPostItem(props.id);
     font-weight: 300;
 }
 
-.blog-body p:first-child {
-    &::first-letter {
-        font-size: 3em;
+@supports(initial-letter: 3) or (-webkit-initial-letter:4) {
+    .blog-body p:first-child::first-letter {
+        -webkit-initial-letter: 3;
+        initial-letter: 3;
+        margin-right: .5rem;
     }
 }
+
+.blog-body p:first-child::first-letter {
+    font-size: 3rem;
+}
+
+
 
 .blogpost-item-wrapper .tags-wrapper {
     gap: 1.25rem;
