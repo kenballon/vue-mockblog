@@ -1,6 +1,6 @@
 <script setup>
 import getAllPosts from '../composables/getAllPost.js'
-import BlogPostsList from '../components/BlogPostsList.vue'
+import BlogPostsList from '../views/BlogPostsList.vue'
 
 
 const { posts, error } = getAllPosts()
@@ -20,9 +20,11 @@ const { posts, error } = getAllPosts()
     <div class="loading-post" v-else>loading list of blogs...</div>
   </main>
 </template>
+
 <style>
 main {
   padding-top: 5rem;
+  padding-inline: 1.125rem;
 }
 
 .h1-welcome {
@@ -43,5 +45,9 @@ main {
 
 h2 {
   font-weight: 500;
+}
+
+.post-wrapper {
+  padding-block: 4rem;
 }
 </style>

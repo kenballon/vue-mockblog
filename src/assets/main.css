@@ -48,6 +48,10 @@ theme;
         justify-content: center;
     }
 
+    .justify-space-between {
+        justify-content: space-between;
+    }
+
     .gap-1 {
         gap: 1.5rem;
     }
@@ -111,15 +115,17 @@ theme;
 
         .submit-btn {
             margin-left: auto;
-            border: 1px solid transparent;
-            padding: .5rem 1rem;
-            background-color: #00591b;
-            color: white;
+            border: 1px solid var(--color-900-dark);
+            padding: .5rem 2rem;
+            background-color: var(--color-900);
+            color: var(--color-900-dark);
             transition: color .3s ease;
             cursor: pointer;
+            border-radius: 40px;
 
             &:hover {
-                background-color: #00a331;
+                background-color: var(--color-800);
+                border: 1px solid var(--color-900);
             }
         }
 

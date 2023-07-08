@@ -1,17 +1,6 @@
 {
   "blogPosts": [
     {
-      "title": "Building My First App with Vue.js and Firebase: Top Mistakes and Key Learnings",
-      "body": "<p>Over the past month, I worked on a not-so-serious side project called focusstopwatch.com (It’s open source. you can access the code here). The site’s purpose? To keep track of your focus time, enabling you to specify tasks and later evaluate your performance.</p><p> The concept came to me after feeling unsatisfied with existing focus/study systems. The traditional Pomodoro method, for example, didn’t quite suit me. I needed a tool to accurately measure my productivity. Hence, FocusStopwatch concept became my go-to.</p>",
-      "tags": [
-        "vuejs",
-        "js",
-        "javascript",
-        "frontend"
-      ],
-      "id": 1
-    },
-    {
       "title": "Must-Know Reusable Module Vs Component In Vue 3 Composition API",
       "body": "<p>As a Vue.js developer, we want to keep our code clean and tidy by creating the optimal amount of reusable code. </p><p>With Composition API, we can absolutely do that by creating reusable JS modules aka hook functions and child components.</p>",
       "tags": [
@@ -42,18 +31,6 @@
         "javascript"
       ],
       "id": 4
-    },
-    {
-      "title": "Routing and SEO Metadata in Next.js 13",
-      "body": "<p>When it comes to building web applications, ensuring proper search engine optimization (SEO) and web shareability is crucial for increasing visibility and attracting users. In version 13, Next.js introduced the Metadata API, which allows you to define metadata for each page, ensuring accurate and relevant information is displayed when your pages are shared or indexed. In this blog post, we will explore how to leverage the Metadata API to enhance routing metadata.</p>\n\n<h2>Importance of routing metadata</h2\n\n <p> When users navigate to different pages within your Next.js application, it's important to provide, at the very least, appropriate document titles and descriptions. By default, the root layout of a Next.js application created using create-next-app includes a metadata object in the layout.tsx file. </p>",
-      "tags": [
-        "nextjs",
-        "react",
-        "reactjs",
-        "html",
-        "css"
-      ],
-      "id": 5
     }
   ]
 }

@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h1>Create Blog</h1>
         <div class="form-wrapper">
+            <h1>Create Blog</h1>
             <form @submit.prevent="handleCreate">
                 <div class="form-group">
                     <label for="blog-heading">Blog Title:</label>

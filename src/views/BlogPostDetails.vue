@@ -6,7 +6,7 @@
         <article>
 
             <div class="tags-wrapper d-flex m-auto-top gap-1">
-                <router-link :to="{ name: 'home' }" class=" d-flex align-items-center">
+                <RouterLink :to="{ name: 'Home' }" class=" d-flex align-items-center">
                     <div class="svg-back-arrow-wrapper">
                         <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -14,7 +14,7 @@
                                 fill="#1B1B1B" />
                         </svg>
                     </div>
-                </router-link>
+                </RouterLink>
             </div>
             <div class="blog-heading-title">
                 <h1>{{ post.title }}</h1>
@@ -47,7 +47,8 @@ const { post, error } = getPostItem(props.id);
     line-height: 1.2em;
 }
 
-.blog-body p {
+.blog-body p,
+div.blog-body {
     margin-bottom: 1.5rem;
     font-size: 1.25rem;
     line-height: 1.5em;
@@ -57,14 +58,17 @@ const { post, error } = getPostItem(props.id);
 }
 
 @supports(initial-letter: 3) or (-webkit-initial-letter:4) {
-    .blog-body p:first-child::first-letter {
+
+    .blog-body p:first-child::first-letter,
+    .blog-body::first-letter {
         -webkit-initial-letter: 3;
         initial-letter: 3;
         margin-right: .5rem;
     }
 }
 
-.blog-body p:first-child::first-letter {
+.blog-body p:first-child::first-letter,
+.blog-body::first-letter {
     font-size: 3rem;
 }
 
