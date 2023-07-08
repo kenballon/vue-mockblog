@@ -45,8 +45,8 @@ const handleCreate = async () => {
                     <label for="tags">Tags:</label>
                     <input type="text" name="tags" id="tags" v-model="tag" @keydown.enter.prevent="handleKeydown">
                     <!-- output tags -->
-                    <ul v-for="tag in tags" :key="tag">
-                        <li class="pill-tag">#{{ tag }}</li>
+                    <ul class="tag-list d-flex">
+                        <li class="pill-tag" v-for="tag in tags" :key="tag">{{ tag }}</li>
                     </ul>
                 </div>
                 <div class="form-group d-flex align-items-center">
@@ -57,6 +57,13 @@ const handleCreate = async () => {
     </div>
 </template>
 <style>
+.tag-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: .875rem;
+}
+
 .pill-tag {
     padding: 4px 10px;
     background-color: #FFD6A5;
@@ -67,5 +74,6 @@ const handleCreate = async () => {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-block: .5rem;
 }
 </style>
