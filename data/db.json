@@ -42,6 +42,18 @@
         "javascript"
       ],
       "id": 4
+    },
+    {
+      "title": "Routing and SEO Metadata in Next.js 13",
+      "body": "<p>When it comes to building web applications, ensuring proper search engine optimization (SEO) and web shareability is crucial for increasing visibility and attracting users. In version 13, Next.js introduced the Metadata API, which allows you to define metadata for each page, ensuring accurate and relevant information is displayed when your pages are shared or indexed. In this blog post, we will explore how to leverage the Metadata API to enhance routing metadata.</p>\n\n<h2>Importance of routing metadata</h2\n\n <p> When users navigate to different pages within your Next.js application, it's important to provide, at the very least, appropriate document titles and descriptions. By default, the root layout of a Next.js application created using create-next-app includes a metadata object in the layout.tsx file. </p>",
+      "tags": [
+        "nextjs",
+        "react",
+        "reactjs",
+        "html",
+        "css"
+      ],
+      "id": 5
     }
   ]
 }

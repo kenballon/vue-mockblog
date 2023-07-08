@@ -48,7 +48,7 @@ const handleKeydown = () => {
 }
 
 const handleCreate = async () => {
-    await createPostItem(title, body, tags).then(
+    await createPostItem(title.value, body.value, tags.value).then(
         //route to home
         router.push('/')
     )

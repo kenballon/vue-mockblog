@@ -1,8 +1,8 @@
 const createPostItem = async (title, body, tags) => {
   const data = new Map();
-  data.set("title", title.value);
-  data.set("body", body.value);
-  data.set("tags", tags.value);
+  data.set("title", title);
+  data.set("body", body);
+  data.set("tags", tags);
 
   const jsonData = JSON.stringify(data, (key, value) => {
     // convert maps to a plain objects
