@@ -9,12 +9,10 @@ const { posts, error } = getAllPosts()
 
 <template>
   <main>
-    <h1 class="h1-welcome">Mockup Blog App</h1>
-    <ul class="h2-short-desc">
-      <li>Made with Vue 3</li>
-      <li>Connected to Firebase No-SQL Database</li>
-      <li>Routing included</li>
-    </ul>
+    <h1 class="h1-welcome">Vue 3 Mockup Blog Site</h1>
+    <h3 class="h2-short-desc">
+      Blog site project made with Vue 3 Composition API. Database is connected using Firebase No-SQL.
+    </h3>
     <div class="error-msg-wrapper" v-if="error">
       {{ error }}
     </div>
@@ -22,7 +20,7 @@ const { posts, error } = getAllPosts()
       <TagFilter :posts="posts" />
       <BlogPostsList :blogposts="posts" />
     </div>
-    <div class="loading-post" v-else>loading list of blogs...</div>
+    <div class="loading-post" v-else>loading blog posts...</div>
   </main>
 </template>
 
