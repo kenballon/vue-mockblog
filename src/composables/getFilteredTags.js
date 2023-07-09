@@ -13,7 +13,6 @@ const getFilterTags = (posts, tags) => {
   });
 
   tags.value = [...tagSet].sort();
-
   return tags;
 };
 
