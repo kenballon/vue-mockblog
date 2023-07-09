@@ -37,7 +37,6 @@ main {
 
 .h2-short-desc {
   font-family: var(--ff-secondary);
-  margin-bottom: 3rem;
   font-weight: 300;
   font-size: 1.25rem;
   width: 45ch;
@@ -49,6 +48,7 @@ h2 {
 }
 
 .post-wrapper {
-  padding-block: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
 }
 </style>
