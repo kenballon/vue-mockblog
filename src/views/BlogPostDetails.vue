@@ -41,6 +41,7 @@ const { post, error } = getPostItem(props.id);
 <style scoped>
 h1 {
     text-transform: capitalize;
+    font-weight: 300;
 }
 
 .blogpost-item-wrapper article {
