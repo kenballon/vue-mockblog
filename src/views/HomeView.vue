@@ -12,7 +12,7 @@ const { posts, error } = getAllPosts()
     <h1 class="h1-welcome">Mockup Blog App</h1>
     <ul class="h2-short-desc">
       <li>Made with Vue 3</li>
-      <li>Connected to Firebase</li>
+      <li>Connected to Firebase No-SQL Database</li>
       <li>Routing included</li>
     </ul>
     <div class="error-msg-wrapper" v-if="error">
