@@ -32,9 +32,10 @@ main {
 
 .h1-welcome {
   text-transform: capitalize;
-  font-size: 64px;
+  font-size: clamp(32px, 5vw, 64px);
   margin-bottom: 2rem;
   font-weight: 500;
+
 }
 
 .h2-short-desc {
@@ -43,6 +44,10 @@ main {
   font-size: 1.25rem;
   width: 45ch;
   letter-spacing: .5px;
+
+  @media (max-width:540px) {
+    width: 100%;
+  }
 }
 
 h2 {
