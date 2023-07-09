@@ -20,6 +20,11 @@ const router = createRouter({
       name: "CreateBlogPost",
       component: () => import("../views/CreateBlogPost.vue"),
     },
+    {
+      path: "/tags/:tag",
+      name: "TagView",
+      component: () => import("../views/TagView.vue"),
+    },
   ],
 });
 

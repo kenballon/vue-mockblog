@@ -22,7 +22,11 @@
             <div class="blog-body" v-html="post.body"></div>
 
             <div class="tags-wrapper d-flex m-auto-top gap-1">
-                <span v-for="tag in post.tags" :key="tag.id">#{{ tag }}</span>
+                <span v-for="tag in post.tags" :key="tag.id">
+                    <RouterLink :to="{ name: 'TagView', params: { tag: tag } }">
+                        {{ tag }}
+                    </RouterLink>
+                </span>
             </div>
         </article>
     </div>

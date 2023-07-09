@@ -1,7 +1,7 @@
 <script setup>
+import TagFilter from '../components/TagFilter.vue';
 import getAllPosts from '../composables/getAllPost.js'
 import BlogPostsList from '../views/BlogPostsList.vue'
-
 
 const { posts, error } = getAllPosts()
 
@@ -15,6 +15,7 @@ const { posts, error } = getAllPosts()
       {{ error }}
     </div>
     <div class="post-wrapper" v-if="posts.length">
+      <TagFilter :posts="posts" />
       <BlogPostsList :blogposts="posts" />
     </div>
     <div class="loading-post" v-else>loading list of blogs...</div>

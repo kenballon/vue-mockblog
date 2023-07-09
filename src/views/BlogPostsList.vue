@@ -21,7 +21,11 @@ const snippetView = (bodyText) => {
                 </router-link>
                 <div class="post-body-excerpt" v-html="snippetView(post.body)"></div>
                 <div class="tags-wrapper d-flex m-auto-top">
-                    <span v-for="tag in post.tags" :key="tag.id">#{{ tag }}</span>
+                    <span v-for="tag in post.tags" :key="tag.id">
+                        <RouterLink :to="{ name: 'TagView', params: { tag: tag } }">
+                            {{ tag }}
+                        </RouterLink>
+                    </span>
                 </div>
             </div>
         </div>
@@ -31,7 +35,7 @@ const snippetView = (bodyText) => {
 
 <style>
 .bloglist-wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .post-items {

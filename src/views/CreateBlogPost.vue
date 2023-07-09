@@ -11,8 +11,7 @@ const tag = ref('')
 const tags = ref([])
 
 const handleKeydown = () => {
-    console.log('adde');
-    if (!tags.value.includes(tag.value)) {
+    if (!tags.value.includes(tag.value.toLowerCase())) {
         tag.value = tag.value.replace(/\s/, "")//removes all whitespaces
         tags.value.push(tag.value)
     }
@@ -20,8 +19,8 @@ const handleKeydown = () => {
 }
 
 const handleCreate = async () => {
-    await createPostItem(title.value, body.value, tags.value).then(
-        //route to home
+    const tagLower = tags.value
+    await createPostItem(title.value, body.value, tagLower).then(
         router.push('/')
     )
 }
