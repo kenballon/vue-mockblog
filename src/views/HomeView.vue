@@ -9,8 +9,12 @@ const { posts, error } = getAllPosts()
 
 <template>
   <main>
-    <h1 class="h1-welcome">VueJS 3 | Mockup Blog App</h1>
-    <h2 class="h2-short-desc">This is made VueJS 3 with Router functionality as a Single Page Application or (SPA)</h2>
+    <h1 class="h1-welcome">Mockup Blog App</h1>
+    <ul class="h2-short-desc">
+      <li>Made with Vue 3</li>
+      <li>Connected to Firebase</li>
+      <li>Routing included</li>
+    </ul>
     <div class="error-msg-wrapper" v-if="error">
       {{ error }}
     </div>

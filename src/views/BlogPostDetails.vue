@@ -38,7 +38,11 @@ const props = defineProps(['id'])
 
 const { post, error } = getPostItem(props.id);
 </script>
-<style>
+<style scoped>
+h1 {
+    text-transform: capitalize;
+}
+
 .blogpost-item-wrapper article {
     max-width: 45ch;
     margin-inline: auto;

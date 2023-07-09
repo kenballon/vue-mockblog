@@ -1,16 +1,23 @@
 import { ref } from "vue";
+import {
+  projectBlogFirestoreDB,
+  collection,
+  getDocs,
+} from "../firebase/config";
+
 const getAllPost = () => {
   const posts = ref([]);
   const error = ref(null);
 
   const getData = async () => {
     try {
-      let response = await fetch("http://localhost:3000/blogPosts");
+      const res = collection(projectBlogFirestoreDB, "posts");
+      const data = await getDocs(res);
 
-      if (!response.ok) {
-        throw new Error("Unable to fetch data from the database...");
-      }
-      posts.value = await response.json();
+      posts.value = data.docs.map((doc) => {
+        const newArrObj = { ...doc.data(), id: doc.id };
+        return newArrObj;
+      });
     } catch (err) {
       error.value = err.message;
       console.log(error.value);

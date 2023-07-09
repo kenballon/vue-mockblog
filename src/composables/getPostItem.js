@@ -1,17 +1,19 @@
 import { ref } from "vue";
+import { projectBlogFirestoreDB, doc, getDoc } from "../firebase/config";
 
-const getPostItem = (id) => {
+const getPostItem = (postID) => {
   const post = ref([null]);
   const error = ref(null);
 
   const getPostItemData = async () => {
     try {
-      let response = await fetch("http://localhost:3000/blogPosts/" + id);
-
-      if (!response.ok) {
-        throw new Error("Unable to fetch that blog post...");
+      const postRef = doc(projectBlogFirestoreDB, "posts", postID);
+      const docSnapshot = await getDoc(postRef);
+      if (docSnapshot.exists()) {
+        post.value = { ...docSnapshot.data(), id: docSnapshot.id };
+      } else {
+        throw new Error("Post does not exist.");
       }
-      post.value = await response.json();
     } catch (err) {
       error.value = err.message;
       console.log(error.value);

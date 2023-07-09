@@ -34,6 +34,10 @@ const snippetView = (bodyText) => {
 
 
 <style>
+h2 {
+    text-transform: capitalize;
+}
+
 .bloglist-wrapper {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }

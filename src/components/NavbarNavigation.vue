@@ -5,8 +5,8 @@
          <RouterLink :to="{ name: 'Home' }"><span>The Studio Blog</span></RouterLink>
       </div>
       <nav class="d-flex align-items-center gap-2">
-         <RouterLink :to="{ name: 'Home' }">Home</RouterLink>
-         <RouterLink :to="{ name: 'CreateBlogPost' }">Create Blog</RouterLink>
+         <!-- <RouterLink :to="{ name: 'Home' }">Home</RouterLink> -->
+         <!-- <RouterLink :to="{ name: 'CreateBlogPost' }">Create Blog</RouterLink> -->
       </nav>
    </header>
 </template>
