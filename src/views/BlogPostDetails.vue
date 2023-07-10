@@ -44,10 +44,15 @@ h1 {
     font-weight: 300;
 }
 
+.blogpost-item-wrapper {
+    padding-bottom: 4rem;
+}
+
 .blogpost-item-wrapper article {
     max-width: 45ch;
     margin-inline: auto;
     margin-block: 4rem;
+
 }
 
 .blog-heading-title h1 {
