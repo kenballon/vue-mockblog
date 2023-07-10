@@ -42,11 +42,14 @@ main {
   font-family: var(--ff-secondary);
   font-weight: 300;
   font-size: 1.25rem;
-  width: 45ch;
   letter-spacing: .5px;
 
   @media (max-width:540px) {
     width: 100%;
+  }
+
+  @media (min-width: 992px) {
+    width: 45ch;
   }
 }
 

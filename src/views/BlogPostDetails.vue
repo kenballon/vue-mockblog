@@ -38,7 +38,7 @@ const props = defineProps(['id'])
 
 const { post, error } = getPostItem(props.id);
 </script>
-<style scoped>
+<style>
 h1 {
     text-transform: capitalize;
     font-weight: 300;
