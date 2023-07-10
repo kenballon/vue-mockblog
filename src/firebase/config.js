@@ -7,7 +7,11 @@ import {
   getDoc,
   addDoc,
   deleteDoc,
-  Timestamp,
+  serverTimestamp,
+  onSnapshot,
+  query,
+  orderBy,
+  where,
 } from "firebase/firestore";
 
 const apiKEY = import.meta.env.VITE_API_KEY;
@@ -21,8 +25,22 @@ const firebaseConfig = {
   appId: "1:945880834903:web:2d95ee3d2d01506984d412",
 };
 
-const app = initializeApp(firebaseConfig); // init firebase
-const db = getFirestore(app); //init firestore service
-const timeStamp = Timestamp.fromDate(new Date());
+initializeApp(firebaseConfig); // init firebase
+const db = getFirestore(); //init firestore service
+const timeStamp = serverTimestamp();
 
-export { db, collection, getDocs, doc, getDoc, addDoc, deleteDoc, timeStamp };
+export {
+  db,
+  collection,
+  getDocs,
+  doc,
+  getDoc,
+  addDoc,
+  deleteDoc,
+  timeStamp,
+  onSnapshot,
+  query,
+  orderBy,
+  where,
+  serverTimestamp,
+};
