@@ -7,6 +7,7 @@ import {
   getDoc,
   addDoc,
   deleteDoc,
+  Timestamp,
 } from "firebase/firestore";
 
 const apiKEY = import.meta.env.VITE_API_KEY;
@@ -21,14 +22,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig); // init firebase
-const projectBlogFirestoreDB = getFirestore(app); //init firestore service
+const db = getFirestore(app); //init firestore service
+const timeStamp = Timestamp.fromDate(new Date());
 
-export {
-  projectBlogFirestoreDB,
-  collection,
-  getDocs,
-  doc,
-  getDoc,
-  addDoc,
-  deleteDoc,
-};
+export { db, collection, getDocs, doc, getDoc, addDoc, deleteDoc, timeStamp };

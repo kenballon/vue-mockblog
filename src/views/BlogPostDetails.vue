@@ -38,7 +38,7 @@
 <script setup>
 import { useRouter } from 'vue-router';
 import getPostItem from '../composables/getPostItem.js'
-import { projectBlogFirestoreDB, doc, deleteDoc } from "../firebase/config";
+import { db, doc, deleteDoc } from "../firebase/config";
 
 const props = defineProps(['id'])
 const router = useRouter()
@@ -46,7 +46,7 @@ const { post, error } = getPostItem(props.id);
 
 
 const handleDelete = async () => {
-    await deleteDoc(doc(projectBlogFirestoreDB, 'posts', props.id))
+    await deleteDoc(doc(db, 'posts', props.id))
     router.push('/')
 }
 

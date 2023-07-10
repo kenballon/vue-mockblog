@@ -10,6 +10,9 @@ config();
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  commonjsOptions: {
+    esmExternals: true,
+  },
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

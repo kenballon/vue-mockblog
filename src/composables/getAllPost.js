@@ -1,9 +1,5 @@
 import { ref } from "vue";
-import {
-  projectBlogFirestoreDB,
-  collection,
-  getDocs,
-} from "../firebase/config";
+import { db, collection, getDocs } from "../firebase/config";
 
 const getAllPost = () => {
   const posts = ref([]);
@@ -11,8 +7,7 @@ const getAllPost = () => {
 
   const getData = async () => {
     try {
-      const res = collection(projectBlogFirestoreDB, "posts");
-      const data = await getDocs(res);
+      const data = await getDocs(collection(db, "posts"));
 
       posts.value = data.docs.map((doc) => {
         const newArrObj = { ...doc.data(), id: doc.id };
