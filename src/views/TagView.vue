@@ -28,3 +28,8 @@ const postWithTags = computed(() => {
 })
 
 </script>
+<style scoped>
+.post-wrapper {
+    padding-top: 5rem;
+}
+</style>
