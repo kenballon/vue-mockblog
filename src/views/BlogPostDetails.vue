@@ -28,15 +28,28 @@
                     </RouterLink>
                 </span>
             </div>
+
+            <!-- <div class="delete-btn-wrapper d-flex">
+                <button @click="handleDelete">Delete This Blog</button>
+            </div> -->
         </article>
     </div>
 </template>
 <script setup>
+import { useRouter } from 'vue-router';
 import getPostItem from '../composables/getPostItem.js'
+import { projectBlogFirestoreDB, doc, deleteDoc } from "../firebase/config";
 
 const props = defineProps(['id'])
-
+const router = useRouter()
 const { post, error } = getPostItem(props.id);
+
+
+const handleDelete = async () => {
+    await deleteDoc(doc(projectBlogFirestoreDB, 'posts', props.id))
+    router.push('/')
+}
+
 </script>
 <style>
 h1 {
@@ -95,5 +108,21 @@ div.blog-body {
 
 .svg-back-arrow-wrapper:hover svg path {
     fill: var(--color-600-dark);
+}
+
+button {
+    margin-left: auto;
+    border: 1px solid var(--color-900-dark);
+    padding: .5rem 2rem;
+    background-color: var(--color-900);
+    color: var(--color-900-dark);
+    transition: color .3s ease;
+    cursor: pointer;
+    border-radius: 40px;
+
+    &:hover {
+        background-color: var(--color-800);
+        border: 1px solid var(--color-900);
+    }
 }
 </style>
