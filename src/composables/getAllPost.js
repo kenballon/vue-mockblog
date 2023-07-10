@@ -1,13 +1,5 @@
 import { ref } from "vue";
-import {
-  db,
-  collection,
-  getDocs,
-  query,
-  orderBy,
-  where,
-  onSnapshot,
-} from "../firebase/config";
+import { db, collection, query, orderBy, onSnapshot } from "../firebase/config";
 
 const getAllPost = () => {
   const posts = ref([]);
