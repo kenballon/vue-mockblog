@@ -1,7 +1,7 @@
 <script setup>
 import TagFilter from '../components/TagFilter.vue';
 import getAllPosts from '../composables/getAllPost.js'
-import BlogPostsList from '../views/BlogPostsList.vue'
+import BlogPostsList from '../components/BlogPostsList.vue'
 
 const { posts, error } = getAllPosts()
 

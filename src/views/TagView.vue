@@ -10,7 +10,7 @@
     </div>
 </template>
 <script setup>
-import BlogPostsList from '../views/BlogPostsList.vue'
+import BlogPostsList from '../components/BlogPostsList.vue'
 import getAllPosts from '../composables/getAllPost.js'
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';

@@ -45,10 +45,10 @@ const router = useRouter()
 const { post, error } = getPostItem(props.id);
 
 
-const handleDelete = async () => {
-    await deleteDoc(doc(db, 'posts', props.id))
-    router.push('/')
-}
+// const handleDelete = async () => {
+//     await deleteDoc(doc(db, 'posts', props.id))
+//     router.push('/')
+// }
 
 </script>
 <style>

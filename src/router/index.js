@@ -12,13 +12,13 @@ const router = createRouter({
     {
       path: "/posts/:id",
       name: "BlogPostDetails",
-      component: () => import("../views/BlogPostDetails.vue"),
+      component: () => import("../views/BlogPostDetailsView.vue"),
       props: true,
     },
     {
       path: "/create",
       name: "CreateBlogPost",
-      component: () => import("../views/CreateBlogPost.vue"),
+      component: () => import("../views/CreateBlogPostView.vue"),
     },
     {
       path: "/tags/:tag",
