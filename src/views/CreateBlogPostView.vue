@@ -30,6 +30,14 @@ const handleCreate = async () => {
     )
 }
 
+{/* <li v-for="(tag, index) in tags" :key="index">
+        {{ tag }}
+        <button @click="deleteTag(index)">Delete</button>
+      </li> */}
+
+// const deleteTag = (index) => {
+//     tags.value.splice(index, 1);
+// };
 </script>
 
 <template>
