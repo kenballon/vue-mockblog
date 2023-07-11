@@ -12,7 +12,7 @@ const tags = ref([])
 
 const handleKeydown = () => {
     if (!tags.value.includes(tag.value.toLowerCase())) {
-        tag.value = tag.value.replace(/\s/, "")//removes all whitespaces
+        tag.value = tag.value.replace(/\s+/g, "")//removes all whitespaces
         tags.value.push(tag.value.toLowerCase())
     }
     tag.value = ''
