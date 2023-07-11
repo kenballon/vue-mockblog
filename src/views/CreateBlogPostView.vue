@@ -46,18 +46,28 @@ const handleCreate = async () => {
                     <textarea name="post-body" id="post-body" v-model="body"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="tags">Tags:</label>
-                    <input type="text" name="tags" id="tags" v-model="tag" @keydown.enter.prevent="handleKeydown"
-                        @keydown.,.prevent="handleKeydown">
-                    <!-- output tags -->
-                    <ul class="tag-list d-flex">
-                        <li class="pill-tag d-flex align-items-center" v-for="tag in tags" :key="tag">
-                            <span class="tag">{{ tag }} </span>
-                            <span class="material-symbols-outlined">
-                                close
-                            </span>
-                        </li>
-                    </ul>
+                    <label for="tags" class="tag-label-txt align-items-center">
+                        <span class="material-symbols-outlined">sell</span>
+                        <span>Add Tags:</span>
+                    </label>
+
+                    <div class="input-tag-wrapper d-flex flex-wrap">
+                        <!-- output tags -->
+                        <ul class="tag-list d-flex  flex-wrap">
+                            <li class="pill-tag d-flex align-items-center" v-for="tag in tags" :key="tag">
+                                <span class="tag">{{ tag }} </span>
+                                <span class="material-symbols-outlined">
+                                    close
+                                </span>
+                            </li>
+                            <li>
+                                <input type="text" name="tags" class="tag-input-text" id="tags" v-model="tag"
+                                    @keydown.enter.prevent="handleKeydown" @keydown.,.prevent="handleKeydown">
+                            </li>
+                        </ul>
+
+                    </div>
+
                 </div>
                 <div class="form-group d-flex align-items-center">
                     <button class="submit-btn">Post</button>
@@ -67,6 +77,39 @@ const handleCreate = async () => {
     </div>
 </template>
 <style>
+.input-tag-wrapper {
+    padding: 1rem .5rem;
+    background: #f9f9f9;
+    border: 1px solid rgb(106, 106, 106);
+    border-radius: 4px;
+}
+
+label {
+    font-weight: 600;
+    color: #383430;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.tag-input-text {
+    background-color: #f9f9f9;
+    border: none;
+    width: auto;
+    padding: 4px 10px;
+    color: #b46300;
+}
+
+.tag-input-text:focus {
+    outline: none;
+}
+
+.tag-label-txt {
+    display: flex;
+}
+
 .tag {
     padding-right: .5rem;
     border-right: 1px solid #b46300;
@@ -89,7 +132,6 @@ const handleCreate = async () => {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-block: .5rem;
     cursor: pointer;
     gap: .5rem;
 }
