@@ -13,7 +13,7 @@ const snippetView = (bodyText) => {
 </script>
 
 <template>
-    <div class="bloglist-wrapper d-flex">
+    <div class="bloglist-wrapper d-flex flex-wrap">
         <div class="post-items" v-for="post in props.blogposts" :key="post.id">
             <div class="post-item-repeat d-flex flex-dir-col">
                 <router-link :to="{ name: 'BlogPostDetails', params: { id: post.id } }">
@@ -46,8 +46,9 @@ h2 {
 
 .post-items {
     min-width: 300px;
-    width: calc(100% / 3);
     padding: 1.5rem;
+    flex: 1 1 0;
+    flex-shrink: 1;
     background-color: #f4ebeb;
     border: 1px solid #FF9B9B;
     border-radius: 8px;
