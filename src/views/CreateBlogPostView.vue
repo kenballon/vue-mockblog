@@ -10,12 +10,17 @@ const body = ref('')
 const tag = ref('')
 const tags = ref([])
 
-const handleKeydown = () => {
-    if (!tags.value.includes(tag.value.toLowerCase())) {
-        tag.value = tag.value.replace(/\s+/g, "")//removes all whitespaces
-        tags.value.push(tag.value.toLowerCase())
+const handleKeydown = (e) => {
+    const key = e.key;
+    if (key === 'Enter' || key === ',') {
+        if (!tags.value.includes(tag.value.toLowerCase())) {
+            tag.value = tag.value.replace(/\s+/g, "")//removes all whitespaces
+            tags.value.push(tag.value.toLowerCase())
+            console.log(tags);
+        }
+        tag.value = ''
     }
-    tag.value = ''
+
 }
 
 const handleCreate = async () => {
@@ -42,10 +47,16 @@ const handleCreate = async () => {
                 </div>
                 <div class="form-group">
                     <label for="tags">Tags:</label>
-                    <input type="text" name="tags" id="tags" v-model="tag" @keydown.enter.prevent="handleKeydown">
+                    <input type="text" name="tags" id="tags" v-model="tag" @keydown.enter.prevent="handleKeydown"
+                        @keydown.,.prevent="handleKeydown">
                     <!-- output tags -->
                     <ul class="tag-list d-flex">
-                        <li class="pill-tag" v-for="tag in tags" :key="tag">{{ tag }}</li>
+                        <li class="pill-tag d-flex align-items-center" v-for="tag in tags" :key="tag">
+                            <span class="tag">{{ tag }} </span>
+                            <span class="material-symbols-outlined">
+                                close
+                            </span>
+                        </li>
                     </ul>
                 </div>
                 <div class="form-group d-flex align-items-center">
@@ -56,6 +67,11 @@ const handleCreate = async () => {
     </div>
 </template>
 <style>
+.tag {
+    padding-right: .5rem;
+    border-right: 1px solid #b46300;
+}
+
 .tag-list {
     margin: 0;
     padding: 0;
@@ -74,5 +90,12 @@ const handleCreate = async () => {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-block: .5rem;
+    cursor: pointer;
+    gap: .5rem;
+}
+
+.pill-tag:hover {
+    background-color: #d2a268;
+    border: 1px solid #b46300;
 }
 </style>
