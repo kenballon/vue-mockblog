@@ -7,8 +7,12 @@ const getAllPost = () => {
 
   const getData = () => {
     try {
-      const colRef = collection(db, "posts");
-      const q = query(colRef, orderBy("createdAt", "desc"));
+      // get db collection from Firebase
+      const colRef = collection(db, "posts"); //collection reference
+      const q = query(colRef, orderBy("createdAt", "desc")); // query needed for us to sort data
+
+      // snapshot needed so that we don't need to always refresh
+      // the browswer for any data changes
       onSnapshot(q, (snapshot) => {
         posts.value = snapshot.docs.map((doc) => {
           console.log({ ...doc.data(), id: doc.id });
