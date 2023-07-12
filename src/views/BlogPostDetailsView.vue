@@ -29,9 +29,9 @@
                 </span>
             </div>
 
-            <!-- <div class="delete-btn-wrapper d-flex">
+            <div class="delete-btn-wrapper d-flex">
                 <button @click="handleDelete">Delete This Blog</button>
-            </div> -->
+            </div>
         </article>
     </div>
 </template>
@@ -45,10 +45,10 @@ const router = useRouter()
 const { post, error } = getPostItem(props.id);
 
 
-// const handleDelete = async () => {
-//     await deleteDoc(doc(db, 'posts', props.id))
-//     router.push('/')
-// }
+const handleDelete = async () => {
+    await deleteDoc(doc(db, 'posts', props.id))
+    router.push('/')
+}
 
 </script>
 <style>

@@ -13,7 +13,7 @@ const snippetView = (bodyText) => {
 </script>
 
 <template>
-    <div class="bloglist-wrapper d-flex flex-wrap">
+    <div class="bloglist-wrapper d-grid">
         <div class="post-items" v-for="post in props.blogposts" :key="post.id">
             <div class="post-item-repeat d-flex flex-dir-col">
                 <router-link :to="{ name: 'BlogPostDetails', params: { id: post.id } }">
@@ -39,34 +39,29 @@ h2 {
 }
 
 .bloglist-wrapper {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     min-width: 100%;
     width: 100%;
     gap: 1rem;
 }
 
 .post-items {
-    min-width: 300px;
+
     padding: 1.5rem;
-    flex: 1 1 0;
-    flex-shrink: 1;
     background-color: #f4ebeb;
     border: 1px solid #FF9B9B;
     border-radius: 8px;
+}
 
-    &:hover {
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-    }
+.post-items:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 @media (min-width: 600px) and (max-width:992px) {
     .bloglist-wrapper {
-        flex-flow: row wrap;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
 
-    .post-items {
-        min-width: 200px;
-        width: calc(100% / 2 - .5rem) !important;
-    }
 }
 
 @media (max-width:590px) {
