@@ -10,7 +10,7 @@ This template should help get you started developing with Vue 3 in Vite.
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-See Netlify  [![Demo]]([https://github.com/bard](https://kenbee-vueblog.netlify.app/)) Site
+See Netlify  [![Demo]()]([https://github.com/bard](https://kenbee-vueblog.netlify.app/)) Site
 
 
 ## Project Setup
