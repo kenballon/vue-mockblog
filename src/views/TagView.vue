@@ -15,10 +15,7 @@ import getAllPosts from '../composables/getAllPost.js'
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
-// const { posts, error, getData } = getAllPosts();
 const { posts, error } = getAllPosts();
-
-// getData();
 
 const route = useRoute()
 
