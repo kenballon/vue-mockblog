@@ -16,7 +16,6 @@ const handleKeydown = (e) => {
         if (!tags.value.includes(tag.value.toLowerCase())) {
             tag.value = tag.value.replace(/\s+/g, "")//removes all whitespaces
             tags.value.push(tag.value.toLowerCase())
-            console.log(tags);
         }
         tag.value = ''
     }

@@ -1,6 +1,5 @@
 import { fileURLToPath, URL } from "node:url";
 import { config } from "dotenv"; // Import dotenv
-
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 

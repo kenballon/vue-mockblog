@@ -1,3 +1,14 @@
+<script setup>
+import { ref } from 'vue';
+import getFilteredTags from '../composables/getFilteredTags.js'
+
+const props = defineProps(['posts'])
+const tags = ref([])
+
+getFilteredTags(props.posts, tags)
+
+</script>
+
 <template>
     <div>
         <div class="heading-wrapper">
@@ -14,16 +25,7 @@
         </div>
     </div>
 </template>
-<script setup>
-import { ref } from 'vue';
-import getFilteredTags from '../composables/getFilteredTags.js'
 
-const props = defineProps(['posts'])
-const tags = ref([])
-
-getFilteredTags(props.posts, tags)
-
-</script>
 <style>
 .heading-wrapper h5 {
     font-size: 1.125rem;
