@@ -14,8 +14,7 @@ const getAllPost = () => {
       // snapshot needed so that we don't need to always refresh
       // the browswer for any data changes
       onSnapshot(q, (snapshot) => {
-        posts.value = snapshot.docs.map((doc) => {
-          console.log({ ...doc.data(), id: doc.id });
+        posts.value = snapshot.docs.map((doc) => {        
           return { ...doc.data(), id: doc.id };
         });
       });

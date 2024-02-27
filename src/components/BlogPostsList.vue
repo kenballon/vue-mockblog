@@ -1,6 +1,6 @@
 <script setup>
 
-const props = defineProps(['blogposts'])
+defineProps(['blogposts'])
 
 const snippetView = (bodyText) => {
     if (bodyText.length > 150) {
@@ -14,7 +14,7 @@ const snippetView = (bodyText) => {
 
 <template>
     <div class="bloglist-wrapper d-grid">
-        <div class="post-items" v-for="post in props.blogposts" :key="post.id">
+        <div class="post-items" v-for="post in blogposts" :key="post.id">
             <div class="post-item-repeat d-flex flex-dir-col">
                 <router-link :to="{ name: 'BlogPostDetails', params: { id: post.id } }">
                     <h2>{{ post.title }}</h2>
