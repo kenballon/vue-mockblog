@@ -1,3 +1,20 @@
+<script setup>
+import { useRouter } from 'vue-router';
+import getPostItem from '../composables/getPostItem.js'
+import { db, doc, deleteDoc } from "../firebase/config";
+
+const props = defineProps(['id'])
+const router = useRouter()
+const { post, error } = getPostItem(props.id);
+
+
+const handleDelete = async () => {
+    await deleteDoc(doc(db, 'posts', props.id))
+    router.push('/')
+}
+
+</script>
+
 <template>
     <div class="blogpost-item-wrapper">
         <div class="if-error-fetch" v-if="error">
@@ -35,22 +52,7 @@
         </article>
     </div>
 </template>
-<script setup>
-import { useRouter } from 'vue-router';
-import getPostItem from '../composables/getPostItem.js'
-import { db, doc, deleteDoc } from "../firebase/config";
 
-const props = defineProps(['id'])
-const router = useRouter()
-const { post, error } = getPostItem(props.id);
-
-
-const handleDelete = async () => {
-    await deleteDoc(doc(db, 'posts', props.id))
-    router.push('/')
-}
-
-</script>
 <style>
 h1 {
     text-transform: capitalize;
