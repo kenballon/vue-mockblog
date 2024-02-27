@@ -111,9 +111,11 @@ a {
   font-family: var(--ff-secondary);
   transition: color .3s ease;
 
-  &:hover {
-    color: rgb(0, 71, 185);
-  }
+  
+}
+
+a:hover {
+  color: rgb(0, 71, 185);
 }
 
 .container {

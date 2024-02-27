@@ -46,13 +46,14 @@ getFilteredTags(props.posts, tags)
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
-
-    &:hover {
-        background-color: #b46300;
-
-        & a {
-            color: #FFD6A5;
-        }
-    }
 }
+
+.tag-lists .tag:hover {
+    background-color: #e37d00;
+}
+
+.tag-lists .tag:hover a {
+    color: #FFD6A5;
+}
+
 </style>

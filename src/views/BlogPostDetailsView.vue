@@ -119,10 +119,10 @@ button {
     transition: color .3s ease;
     cursor: pointer;
     border-radius: 40px;
+}
 
-    &:hover {
-        background-color: var(--color-800);
+button:hover {
+    background-color: var(--color-800);
         border: 1px solid var(--color-900);
-    }
 }
 </style>

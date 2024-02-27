@@ -91,9 +91,11 @@ h2 {
     flex-wrap: wrap;
     column-gap: .5rem;
     row-gap: .5rem;
+}
 
-    & span {
-        padding: 4px 10px;
+.tags-wrapper span {
+
+    padding: 4px 10px;
         background-color: #FFD6A5;
         border: 1px solid #b46300;
         border-radius: 40px;
@@ -102,6 +104,5 @@ h2 {
         font-weight: 300;
         text-transform: uppercase;
         letter-spacing: 1px;
-    }
 }
 </style>

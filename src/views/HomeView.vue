@@ -43,12 +43,16 @@ main {
   font-weight: 300;
   font-size: 1.25rem;
   letter-spacing: .5px;
+}
 
-  @media (max-width:540px) {
+@media (max-width:540px) {
+  .h2-short-desc {
     width: 100%;
   }
+}
 
-  @media (min-width: 992px) {
+@media (min-width: 992px) {
+  .h2-short-desc {
     width: 45ch;
   }
 }
